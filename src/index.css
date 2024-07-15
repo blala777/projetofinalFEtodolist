@@ -1,0 +1,158 @@
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #111111;
+
+}
+
+h1,
+h2,
+h3,
+input,
+button {
+  font-family: 'Press Start 2P', system-ui;
+  
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  gap: 14px;
+ 
+  /*FUNDO*/
+    --s:37px; /* shape size */
+    --m:1px;  /* line thickness */
+  
+    --v1: #fff 119.5deg, #0000 120.5deg;
+    --v2: #c41c1c  119.5deg, #0000 120.5deg;
+    background:
+      conic-gradient(at var(--m)              calc(var(--s)*0.5777), transparent 270deg, #000 0deg),
+      conic-gradient(at calc(100% - var(--m)) calc(var(--s)*0.5777), #000 90deg,  transparent 0deg),
+      conic-gradient(from -60deg at 50% calc(var(--s)*0.8662)             , var(--v1)),
+      conic-gradient(from -60deg at 50% calc(var(--s)*0.8662 + 2*var(--m)), var(--v2)),
+      conic-gradient(from 120deg at 50% calc(var(--s)*1.4435 + 3*var(--m)), var(--v1)),
+      conic-gradient(from 120deg at 50% calc(var(--s)*1.4435 +   var(--m)), var(--v2)),
+      linear-gradient(90deg, #fff calc(50% - var(--m)),#000 0 calc(50% + var(--m)), #fff 0);
+    background-size: calc(var(--s) + 2*var(--m)) calc(var(--s)*1.732 + 3*var(--m)); 
+    mix-blend-mode:lighten;
+  }
+  html:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:linear-gradient(90deg,rgb(211, 231, 243),rgb(142, 212, 252),rgb(177, 226, 255)) left/400% 100%;
+  }
+  
+
+
+/*
+*/
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header,
+.main {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 14px;
+}
+
+header input {
+  flex: 1;
+  border-radius: 14px;
+  outline: none;
+  width: 100%;
+}
+
+header button {
+  border-radius: 14px;
+  background: transparent;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+header button:hover {
+  opacity: 0.7;
+}
+
+header button,
+header input {
+  padding: 14px 18px;
+  border: none;
+  outline: none;
+  background: rgb(255, 60, 60);
+}
+
+p {
+  font-size: 0.9em;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: white;
+}
+
+.todoItem p {
+  flex: 1;
+}
+
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.actionsContainer button {
+  transition-duration: 200ms;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.actionsContainer button:hover {
+  opacity: 0.7;
+}
+
+
+
+@media (min-width: 640px) {
+
+  header button,
+  header input {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+
+.containerPrincipal{
+  background-color: rgb(153, 110, 110);
+ width: 80%;
+align-items: center;
+display: auto;
+align-self: center;
+}
+
+
+
